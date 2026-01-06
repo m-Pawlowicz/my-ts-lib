@@ -1,5 +1,6 @@
 import { type ReactNode } from "react";
 import { css } from "@emotion/react";
+import "./Button.css";
 
 interface ButtonProps {
   onClick: () => void;
@@ -25,7 +26,7 @@ const buttonStyles = css({
 
 export function Button({ onClick, children }: ButtonProps) {
   return (
-    <button css={buttonStyles} onClick={onClick}>
+    <button css={buttonStyles} className={"root"} onClick={onClick}>
       {children}
     </button>
   );
