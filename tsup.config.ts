@@ -9,12 +9,15 @@ export default defineConfig({
   sourcemap: true,
   clean: true,
   tsconfig: "tsconfig.build.json",
-  external: ["react", "react-dom", "react/jsx-runtime"],
+  external: [
+    "react",
+    "react-dom",
+    "react/jsx-runtime",
+    "@emotion/react",
+    "@emotion/styled",
+    "@tanstack/react-query",
+  ],
   treeshake: false,
   bundle: false,
   splitting: false,
-  loader: {
-    ".svg": "copy",
-    ".css": "copy",
-  },
 });
